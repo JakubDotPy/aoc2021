@@ -2,8 +2,7 @@ import argparse
 import os.path
 
 import pytest
-
-from support.support import timing
+from support import timing
 
 INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.txt')
 # NOTE: paste test text here
