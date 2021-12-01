@@ -11,6 +11,16 @@ INPUT_S = """\
 
 
 def compute(s: str) -> int:
+    # parse numbers
+    nums = [int(n) for n in s.splitlines()]
+    for n in nums:
+        ...
+
+    # parse lines
+    lines = s.splitlines()
+    for line in lines:
+        ...
+
     # TODO: implement solution here!
     return 0
 
