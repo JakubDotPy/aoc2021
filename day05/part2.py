@@ -31,16 +31,15 @@ class Line:
         self.x_slope = 1 if self.x1 <= self.x2 else -1
         self.y_slope = 1 if self.y1 <= self.y2 else -1
 
-        self.points = self.calculate_points()
-
-    def calculate_points(self):
+    @property
+    def points(self):
         x_points = range(self.x1, self.x2 + self.x_slope, self.x_slope)
         y_points = range(self.y1, self.y2 + self.y_slope, self.y_slope)
         fill_value = x_points[0] if len(x_points) == 1 else y_points[0]
         return itertools.zip_longest(x_points, y_points, fillvalue=fill_value)
 
     @property
-    def is_isometric(self):
+    def is_othogonal(self):
         return self.x1 == self.x2 or self.y1 == self.y2
 
     def __repr__(self):
@@ -64,7 +63,7 @@ def compute(s: str) -> int:
         chain.from_iterable(
             l.points
             for l in lines
-            # if l.is_isometric
+            # if l.is_othogonal
             )
         )
 
