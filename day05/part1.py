@@ -39,7 +39,7 @@ class Line:
         return itertools.zip_longest(x_points, y_points, fillvalue=fill_value)
 
     @property
-    def is_othogonal(self):
+    def is_orthogonal(self):
         return self.x1 == self.x2 or self.y1 == self.y2
 
     def __repr__(self):
@@ -63,7 +63,7 @@ def compute(s: str) -> int:
         chain.from_iterable(
             l.points
             for l in lines
-            if l.is_othogonal
+            if l.is_orthogonal
             )
         )
 
