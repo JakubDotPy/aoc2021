@@ -17,7 +17,7 @@ def compute(s: str) -> int:
     mean = int(statistics.mean(nums))
 
     individual_fuel = (
-        sum(range(abs(n - mean) + 1))
+        (abs(mean - n) ** 2 + abs(mean - n)) // 2
         for n in nums
         )
 
