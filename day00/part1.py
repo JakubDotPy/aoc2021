@@ -8,6 +8,7 @@ INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.txt')
 # NOTE: paste test text here
 INPUT_S = """\
 """
+EXPECTED = 0
 
 
 def compute(s: str) -> int:
@@ -29,7 +30,7 @@ def compute(s: str) -> int:
 @pytest.mark.parametrize(
     ('input_s', 'expected'),
     (
-            (INPUT_S, 0),
+            (INPUT_S, EXPECTED),
             ),
     )
 def test(input_s: str, expected: int) -> None:
