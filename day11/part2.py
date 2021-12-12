@@ -19,7 +19,7 @@ INPUT_S = """\
 4846848554
 5283751526
 """
-EXPECTED = 1656
+EXPECTED = 198
 
 
 def adjacent(x, y):
